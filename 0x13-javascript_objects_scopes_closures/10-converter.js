@@ -1,10 +1,7 @@
 #!/usr/bin/node
 
-let cuantity = 0;
-
-const logMe = (item) => {
-  console.log(`${cuantity}: ${item}`);
-  cuantity++;
+exports.converter = function (base) {
+  return function (num) {
+    return num.toString(base);
+  };
 };
-
-module.exports = { logMe };
